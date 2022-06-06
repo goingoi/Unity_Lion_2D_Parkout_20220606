@@ -8,7 +8,7 @@ public class frogController : MonoBehaviour
     // Start is called before the first frame update
     Rigidbody2D rb;
     float volecity;
-    bool isGround;
+    Transform isGround;
     Animator anim;
     void Start()
     {
@@ -18,7 +18,7 @@ public class frogController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
         Movement();
         SwAnim();
         Jump();
@@ -39,7 +39,7 @@ public class frogController : MonoBehaviour
     }
     void Jump(){
         if(Input.GetButtonDown("Jump")){
-            rb.velocity = new Vector2(rb.velocity.x,10);
+            rb.velocity = new Vector2(rb.velocity.x,5);
         }
     }
 }
