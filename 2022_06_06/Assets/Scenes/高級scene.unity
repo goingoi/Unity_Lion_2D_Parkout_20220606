@@ -302,6 +302,7 @@ GameObject:
   - component: {fileID: 385380795}
   - component: {fileID: 385380797}
   - component: {fileID: 385380798}
+  - component: {fileID: 385380799}
   m_Layer: 0
   m_Name: frog
   m_TagString: Untagged
@@ -457,11 +458,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385380790}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b6e079189bf5ad42aa48d1e2352bb3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &385380799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385380790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aefa771457aa9b244a3443a4e447acc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frog: {fileID: 385380790}
 --- !u!1 &734193183
 GameObject:
   m_ObjectHideFlags: 0

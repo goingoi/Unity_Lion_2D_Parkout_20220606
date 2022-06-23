@@ -12,7 +12,6 @@ public class frogController : MonoBehaviour
 
 
     #region 資料:保存系統需要的資料
-
     Rigidbody2D rb;
     float volecity;
     [SerializeField, Header("地板"), Tooltip("這是地板標籤")] private LayerMask ground;
@@ -20,8 +19,6 @@ public class frogController : MonoBehaviour
     [SerializeField, Range(1, 3)] int JumpCount;
     bool jumpPress, isGround;
     #endregion
-
-
     #region 功能:實作該系統的複雜方法
 
     #endregion
@@ -57,6 +54,7 @@ public class frogController : MonoBehaviour
     }
     void Movement()
     {
+        volecity = Input.GetAxis("Horizontal");
         if (volecity > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
@@ -65,7 +63,6 @@ public class frogController : MonoBehaviour
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
-        volecity = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(volecity * 5, rb.velocity.y);
     }
     void SwAnim()
